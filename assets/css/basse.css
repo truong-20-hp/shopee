@@ -1,0 +1,234 @@
+:root{
+    --white-color: #fff;
+    --black-color:#000;
+    --text-color:#333;
+    --text-main:rgb(245, 62, 46);
+    --border-color: #dbdbdb;
+    --header-height: 120px;
+    --navbar-height: 36px
+}
+*{
+    box-sizing: inherit;
+}
+html{
+    font-size: 62.5%;
+    line-height: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.grid__column-2 {
+    width: 16.6667%;
+    padding-left: 5px;
+    padding-right: 5px;
+    
+}
+
+.grid__column-2-4{
+
+    width: 20%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top :10px;
+}
+.grid__column-10 {
+    width: 83.3333%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.no-hover{
+    cursor: text;
+    color: var(--white-color);
+   
+}
+
+@keyframes FadeIn{
+    0%{
+        opacity: 0;
+
+    }
+    50%{
+       
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes GrowUp{
+    from{
+        transform: scale(70%);
+    }
+    to{
+        transform: scale(100%);
+    }
+}
+.modal{
+   
+    position:fixed;
+    top: 0;
+    right:0;
+    bottom: 0;
+    left:0;
+    animation: FadeIn linear 0.2s;
+    display: none;
+
+}
+.modal.open{
+    display: flex;
+
+}
+
+.modal__overlay{
+    position: absolute;
+    width: 100%;
+    height:100%;
+    background-color:rgba(51, 51, 51,0.2);
+}
+.modal__body{
+    margin: auto;
+    background-color: #fff;
+    border-radius: 4px;
+    z-index: 1  ;
+    overflow: hidden;
+    animation: GrowUp linear 0.1s;
+}
+.auth-form{
+    width: 500px;
+    display:none;
+  
+}
+.auth-form--register.open{
+    display: block;
+
+}
+.auth-form--login.open{
+    display: block;
+}
+.auth-form__container{
+    padding: 0 32px 20px;
+}
+.auth-form__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 5px;
+
+}
+.auth-form__heading{
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: var(--text-color);
+
+}
+.auth-form__switch-btn{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--text-main);
+    cursor: pointer;
+}
+.auth-form__input {
+    width: 100%;
+    height: 40px;
+    margin-top: 16px;
+    padding: 0 8px;
+    font-size: 1.4rem;
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    outline: none;
+}
+.auth-form__input:focus{
+    border-color:#777;
+}
+.auth-form__aside{
+    margin-top: 18px;
+    
+}
+.auth-form__polity-text {
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 1.8rem;
+    padding: 0 5px;
+}
+.auth-form__text-link{
+    text-decoration: none;
+    color: var(--text-main);
+
+}
+.auth-form__controls{
+    margin-top: 80px;
+    display:flex;
+    justify-content:flex-end;
+}   
+.btn{
+    min-width: 142px;
+    height: 36px;
+    text-decoration-line: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.4rem;
+    line-height: 36px;
+    cursor: pointer;
+
+}
+.btn.btn--primary{
+    background-color: var(--text-main);
+    color: var(--white-color);
+}
+.auth-form__cocials{
+    justify-content: center;
+    display: flex;
+    padding: 12px 20px;
+    margin-top: 8px;
+    background-color: #f3eaea;
+}
+.btn--with-icon {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+}
+
+.pagination-item {
+    font-size: 2rem;
+    list-style: none;
+    margin: 0px 6px;
+}
+.pagination-item__link {
+    text-decoration: none;
+    color: #666;
+    min-width: 40px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pagination-item--active .pagination-item__link{
+    color: var(--white-color);
+    background-color: var(--text-main);
+    border-radius: 3px;
+
+}
+.pagination-item--active .pagination-item__link:hover{
+    opacity: 0.8;
+}
+.pagination-item__icon{
+    font-size: 1.7rem;
+}
+
+
+
